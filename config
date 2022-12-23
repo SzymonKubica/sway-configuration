@@ -1,10 +1,8 @@
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
+# Custom SwayWM configuration
 # Read `man 5 sway` for a complete reference.
+# Author: Szymon Kubica <szymo.kubica@gmail.com>
 
 ### Variables
-#
 
 set $background ~/.config/sway/hexagons.png
 
@@ -28,42 +26,6 @@ set $menu bemenu-run -i -b --line-height=24 --tb='#090909' --tf='#bbbbbb' --fb='
 set $my_cursor Breeze
 set $my_cursor_size 24
 seat seat0 xcursor_theme $my_cursor $my_cursor_size
-
-### Output configuration
-#
-
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
-
-### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-
-### Input configuration
-#
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
 
 ### Key bindings
 #
@@ -139,24 +101,12 @@ seat seat0 xcursor_theme $my_cursor $my_cursor_size
     bindsym $mod+Shift+8 move container to workspace number 8
     bindsym $mod+Shift+9 move container to workspace number 9
     bindsym $mod+Shift+0 move container to workspace number 10
-    # Note: workspaces can have any name you want, not just numbers.
-    # We just use 1-10 as the default.
 
-    # workspaces
-    set $ws1   1:
-    set $ws2   2:
-    set $ws5 22:
 
-# Default workspaces for common programs
-assign [class="^Chromium$"] $ws1
-# assign [class="^code-oss$"] $ws2
-assign [class="^Alacritty$"] $ws2
-assign [class="^Spotify$"] $ws5
-#
 # Layout stuff:
 #
     # You can "split" the current object of your focus with
-    # $mod+b or $mod+v, for horizontal and vertical splits
+    # $mod2+h or $mod2+v, for horizontal and vertical splits
     # respectively.
     bindsym $mod2+h splith
     bindsym $mod2+v splitv
@@ -218,17 +168,6 @@ mode "resize" {
 bindsym $mod2+r mode "resize"
 
 
-# Multimedia
-bindsym --locked XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') +5% && pkill -RTMIN+9 i3blocks
-bindsym --locked XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') -5% && pkill -RTMIN+9 i3blocks
-bindsym --locked XF86AudioMute exec --no-startup-id pactl set-sink-mute $(pacmd list-sinks |awk '/* index:/{print $3}') toggle
-bindsym --locked XF86AudioPlay exec playerctl play-pause
-bindsym --locked XF86AudioNext exec playerctl next
-bindsym --locked XF86AudioPrev exec playerctl previous
-
-
-bindsym XF86MonBrightnessUp exec brillo -q -A 5
-bindsym XF86MonBrightnessDown exec brillo -q -U 5
 
 # Screenshot setup.
 # capture all screens to clipboard
@@ -240,9 +179,6 @@ bindsym Print exec grim -g "$(slurp)" - | wl-copy
 # capture the focused monitor to clipboard
 bindsym Shift+Control+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
 
-# Brightness controls
-bindsym --locked XF86MonBrightnessUp exec --no-startup-id light -A 10
-bindsym --locked XF86MonBrightnessDown exec --no-startup-id light -U 10
 
 # Colors customisation:
 set $cl_high #af0000
@@ -268,26 +204,6 @@ gaps inner 5
 
 output * bg $background fill
 
-# Languages
-input type:keyboard {
-    xkb_layout us,de(qwerty),pl
-    xkb_options grp:win_space_toggle
-}
-
-input "1267:12680:ELAN0673:00_04F3:3188_Touchpad" {
-    accel_profile adaptive
-    click_method button_areas
-    dwt disabled
-    natural_scroll enabled
-    scroll_method two_finger
-    tap enabled
-}
-
-input "2:10:TPPS/2_Elan_TrackPoint" {
-    accel_profile adaptive
-    natural_scroll disabled
-    pointer_accel 0.0
-}
 
 bindsym $mod2+Space exec --no-startup-id pkill -RTMIN+8 i3blocks
 
@@ -318,4 +234,6 @@ exec pkill -RTMIN+9 i3blocks
 # Sets the window manager name so that JetBrains IDE's work properly.
 exec wmname LG3D
 
-include /etc/sway/config.d/*
+include /etc/sway/config.d/input
+include /etc/sway/config.d/keybindings/media
+include ~/.config/sway/config.d/input

@@ -1,0 +1,20 @@
+# Languages
+input type:keyboard {
+    xkb_layout us,de(qwerty),pl
+    xkb_options grp:win_space_toggle
+}
+
+input "1267:12680:ELAN0673:00_04F3:3188_Touchpad" {
+    accel_profile adaptive
+    click_method button_areas
+    dwt disabled
+    natural_scroll enabled
+    scroll_method two_finger
+    tap enabled
+}
+
+input "2:10:TPPS/2_Elan_TrackPoint" {
+    accel_profile adaptive
+    natural_scroll disabled
+    pointer_accel 0.0
+}
