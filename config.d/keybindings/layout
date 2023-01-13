@@ -1,0 +1,27 @@
+# Layout manipulation keybindings
+
+# You can "split" the current object of your focus with
+# $mod2+h or $mod2+v, for horizontal and vertical splits
+# respectively.
+bindsym $mod2+h splith
+bindsym $mod2+v splitv
+
+# Switch the current container between different layout styles
+bindsym $mod2+s layout stacking
+bindsym $mod2+w layout tabbed
+bindsym $mod2+e layout toggle split
+
+# Make the current focus fullscreen
+bindsym $mod2+f fullscreen
+
+# Toggle the current focus between tiling and floating mode
+bindsym $mod+$mod2+space floating toggle
+
+# Toggle the first monitor off
+bindsym $mod+$mod2+d exec swaymsg output eDP-1 disable
+
+# Swap focus between the tiling area and the floating area
+bindsym $mod+Shift+Space focus mode_toggle
+
+# Move focus to the parent container
+bindsym $mod+a focus parent
