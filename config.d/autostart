@@ -1,0 +1,7 @@
+# Commands to be executed on startup of Sway.
+
+# Ensures that the volume is displayed on startup.
+exec pkill -RTMIN+9 i3blocks
+
+# Sets the window manager name so that JetBrains IDE's work properly.
+exec wmname LG3D
