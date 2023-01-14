@@ -20,7 +20,7 @@ floating_modifier $mod2 normal
 bindsym $mod+$mod2+r reload
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+Shift+e exec swaynag -m "You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session." --background 09090950 --border-bottom AF0000 --button-background 09090950 --button-border-size 2 -B 'Yes, exit sway' 'swaymsg exit' -s "No, stay here."
 
 # Scratchpad:
 #
