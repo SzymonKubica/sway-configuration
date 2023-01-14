@@ -1,7 +1,6 @@
 # Languages
 input type:keyboard {
     xkb_layout us,de(qwerty),pl
-    xkb_options grp:win_space_toggle
 }
 
 input "1267:12680:ELAN0673:00_04F3:3188_Touchpad" {
