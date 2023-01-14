@@ -2,4 +2,4 @@
 # Sends pkill signal with a special value to i3blocks to tell it to change
 # the keyboard language
 
-bindsym $mod2+Space exec --no-startup-id pkill -RTMIN+8 i3blocks
+bindsym $mod2+Space exec pkill -RTMIN+10 i3blocks
