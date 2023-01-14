@@ -24,4 +24,4 @@ bindsym $mod+$mod2+d exec swaymsg output eDP-1 disable
 bindsym $mod+Shift+Space focus mode_toggle
 
 # Move focus to the parent container
-bindsym $mod+a focus parent
+bindsym $mod2+a focus parent
