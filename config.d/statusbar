@@ -15,6 +15,7 @@ bar {
         statusline #ffffff
         background #09090980
         inactive_workspace #44444495 #09090980 #ffffff
+        active_workspace #090909 #444444 #ffffff
         focused_workspace #090909 #af0000 #090909
     }
 }
