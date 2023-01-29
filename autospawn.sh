@@ -8,6 +8,7 @@ sleep 0.1 &&
 swaymsg focus left &&
 swaymsg focus left &&
 swaymsg focus left &&
+clear &&
 swaymsg move scratchpad &&
 swaymsg layout toggle split &&
 swaymsg focus down &&
