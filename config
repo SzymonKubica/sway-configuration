@@ -14,4 +14,5 @@ include ~/.config/sway/config.d/keybindings/layout
 include ~/.config/sway/config.d/keybindings/resizing
 include ~/.config/sway/config.d/keybindings/media
 include ~/.config/sway/config.d/keybindings/screenshot
+include ~/.config/sway/config.d/keybindings/custom
 include ~/.config/sway/config.d/autostart

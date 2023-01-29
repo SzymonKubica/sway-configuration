@@ -1,13 +1,12 @@
 
-swaymsg exec exec -- alacritty --hold -e zsh -c neofetch &&
+alacritty -e zsh -c 'neofetch && zsh' &
 sleep 0.1 &&
-swaymsg exec exec -- alacritty --hold -e zsh -c btop &&
-sleep 0.1 &&
-swaymsg exec exec -- alacritty --hold -e zsh -c ncmpcpp &&
+alacritty -e zsh -c 'ncmpcpp && zsh' &
+sleep 0.2 &&
+alacritty -e zsh -c 'btop && zsh' &
+sleep 0.3 &&
 swaymsg layout toggle split &&
-swaymsg move right &&
-swaymsg focus left &&
-swaymsg focus down
+swaymsg move right
 
 
 
