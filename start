@@ -6,7 +6,8 @@ sleep 0.2 &&
 alacritty -e zsh -c 'btop && zsh' &
 sleep 0.3 &&
 swaymsg layout toggle split &&
-swaymsg move right
+swaymsg move right &&
+swaymsg focus left
 
 
 
