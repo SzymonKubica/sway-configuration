@@ -6,6 +6,7 @@ include /etc/sway/config.d/input
 include ~/.config/sway/config.d/variables
 include ~/.config/sway/config.d/input
 include ~/.config/sway/config.d/theme
+include ~/.config/sway/config.d/display_behaviour
 include ~/.config/sway/config.d/language
 include ~/.config/sway/config.d/statusbar
 include ~/.config/sway/config.d/keybindings/basic
