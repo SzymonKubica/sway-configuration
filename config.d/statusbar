@@ -4,6 +4,7 @@
 
 bar {
     position bottom
+    tray_output none
 
     font "JetBrains Mono Nerd Font 10"
 
