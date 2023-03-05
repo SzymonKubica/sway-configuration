@@ -4,7 +4,7 @@
 exec pkill -RTMIN+9 i3blocks
 
 # Sets the window manager name so that JetBrains IDE's work properly.
-exec /usr/bin/wmname LG3D
+exec_always /usr/bin/wmname LG3D
 
 # Starts the playerctld daemon to always target the last audio output
 # with the media key controls.
