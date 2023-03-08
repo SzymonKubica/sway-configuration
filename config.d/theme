@@ -4,6 +4,9 @@
 set $my_cursor breeze
 set $my_cursor_size 24
 
+# Globally set the breeze cursor for all gtk apps
+exec_always gsettings set org.gnome.desktop.interface cursor-theme breeze
+
 # Colors customisation:
 set $cl_high #af0000
 set $cl_indi #d9d8d8
@@ -19,7 +22,7 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
 # Window borders
 default_border pixel 1
-default_floating_border none
+default_floating_border pixel 1
 hide_edge_borders smart
 
 # Smart window gaps
