@@ -1,11 +1,12 @@
 # Theme settings
 
 # Setting up the cursor
-set $my_cursor breeze
+set $my_cursor Breeze
 set $my_cursor_size 24
 
 # Globally set the breeze cursor for all gtk apps
-exec_always gsettings set org.gnome.desktop.interface cursor-theme breeze
+exec_always gsettings set org.gnome.desktop.interface cursor-theme Breeze
+seat seat0 xcursor_theme $my_cursor $my_cursor_size
 
 # Colors customisation:
 set $cl_high #af0000
