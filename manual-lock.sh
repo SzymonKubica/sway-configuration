@@ -21,5 +21,9 @@ swaylock \
   --text-clear-color ffffff \
   --text-caps-lock-color ffffff \
   --screenshot \
+  --line-wrong-color 00000000 \
+  --text-wrong-color ffffff \
+  --inside-wrong-color 00000050 \
   --effect-blur 10x10 \
+  --ring-wrong-color af0000 \
   --daemonize
