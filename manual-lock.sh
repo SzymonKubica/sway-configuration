@@ -1,5 +1,3 @@
-!/usr/bin/bash
-
 swaylock \
   --hide-keyboard-layout \
   --clock \
