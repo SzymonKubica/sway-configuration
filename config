@@ -18,3 +18,7 @@ include ~/.config/sway/config.d/keybindings/media
 include ~/.config/sway/config.d/keybindings/screenshot
 include ~/.config/sway/config.d/keybindings/custom
 include ~/.config/sway/config.d/autostart
+
+# Autologin setup
+ exec pidof mylock > /dev/null || exec /home/szymon/.config/sway/wallpaper-lock.sh
+ exec pidof mylock > /dev/null || exec /home/szymon/.config/sway/loginlock.sh
