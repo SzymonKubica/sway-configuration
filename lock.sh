@@ -9,7 +9,7 @@ swaylock \
   --indicator-thickness 5 \
   --inside-color 00000050 \
   --line-color 00000000 \
-  --ring-ver-color 00ffff90 \
+  --ring-ver-color 00ffffff \
   --text-ver-color 00000000 \
   --inside-ver-color 00000000 \
   --line-uses-inside \
