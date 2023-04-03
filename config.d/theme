@@ -31,7 +31,7 @@ smart_gaps on
 gaps inner 5
 
 set $background ~/.config/sway/hexagons.png
-output * bg $background fill
+output * bg $background fill #000000
 
 
 

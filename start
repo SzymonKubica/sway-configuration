@@ -1,9 +1,9 @@
 
-alacritty -e zsh -c 'neofetch && zsh' &
+foot -e zsh -c 'neofetch && zsh' &
 sleep 0.1 &&
-alacritty -e zsh -c 'ncmpcpp && zsh' &
+foot -e zsh -c 'ncmpcpp && zsh' &
 sleep 0.2 &&
-alacritty -e zsh -c 'btop && zsh' &
+foot -e zsh -c 'btop && zsh' &
 sleep 0.3 &&
 swaymsg layout toggle split &&
 swaymsg move right &&
