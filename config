@@ -2,6 +2,9 @@
 # Read `man 5 sway` for a complete reference.
 # Author: Szymon Kubica <szymo.kubica@gmail.com>
 
+# Autologin setup
+exec /home/szymon/.config/sway/wallpaper-lock.sh
+
 include /etc/sway/config.d/input
 include ~/.config/sway/config.d/variables
 include ~/.config/sway/config.d/input
@@ -19,5 +22,3 @@ include ~/.config/sway/config.d/keybindings/screenshot
 include ~/.config/sway/config.d/keybindings/custom
 include ~/.config/sway/config.d/autostart
 
-# Autologin setup
-exec /home/szymon/.config/sway/wallpaper-lock.sh
