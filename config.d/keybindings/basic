@@ -20,7 +20,7 @@ floating_modifier $mod2 normal
 bindsym $mod+$mod2+r reload
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+Escape exec swaymsg exit
+bindsym $mod2+Shift+Escape exec swaymsg exit
 
 # Scratchpad:
 #
