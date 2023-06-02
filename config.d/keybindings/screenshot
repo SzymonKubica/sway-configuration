@@ -1,10 +1,14 @@
 # Screenshot setup.
 
 # capture all screens to clipboard
-bindsym Shift+Print exec grim - | wl-copy
+bindsym Control+Shift+mod2+Print exec grim - | wl-copy
 
 # capture the specified screen area to clipboard
 bindsym Print exec grim -g "$(slurp)" - | wl-copy
+# capture selection and save under Screenshots
+bindsym Shift+Print exec env GRIM_DEFAULT_DIR=/home/szymon/Screenshots grim -g "$(slurp)"
 
 # capture the focused monitor to clipboard
-bindsym Shift+Control+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
+bindsym mod2+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
+# capture the focused monitor and save under Screenshots
+bindsym Shift+mod2+Print exec env GRIM_DEFAULT_DIR=/home/szymon/Screenshots grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
