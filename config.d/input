@@ -17,3 +17,6 @@ input "2:10:TPPS/2_Elan_TrackPoint" {
     natural_scroll disabled
     pointer_accel 0.2
 }
+
+# Disable sloppy focus
+focus_follows_mouse no
