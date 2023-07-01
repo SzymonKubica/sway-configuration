@@ -1,5 +1,8 @@
 # Navigation keybindings
 
+# Add Alt+Tab behaviour
+bindsym Alt+Tab workspace back_and_forth
+
 # Move your focus around
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
