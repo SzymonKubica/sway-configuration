@@ -1,0 +1,15 @@
+# Touchpad gestures setup
+
+bindgesture swipe:4:right workspace prev
+bindgesture swipe:4:left workspace next
+
+bindgesture swipe:3:right focus right
+bindgesture swipe:3:left focus left
+bindgesture swipe:3:up focus up
+bindgesture swipe:3:down focus down
+
+bindgesture pinch:inward floating enable
+bindgesture pinch:outward floating disable
+bindgesture pinch:inward+up move scratchpad
+bindgesture pinch:outward+down scratchpad show
+
