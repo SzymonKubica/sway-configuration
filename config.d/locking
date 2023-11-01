@@ -2,3 +2,6 @@ exec_always killall swayidle
 exec_always bash $HOME/.config/sway/swayidle.sh
 
 bindsym $mod2+l exec $HOME/.config/sway/manual-lock.sh 50
+bindsym $mod2+p exec killall swayidle
+bindsym $mod2+Shift+l exec bash $HOME/.config/sway/swayidle.sh
+
