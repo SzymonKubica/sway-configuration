@@ -1,5 +1,6 @@
-laptop_display_showing=$(swaymsg -t get_outputs | grep 'eDP-1' | wc -l)
-if [[ "$laptop_display_showing" == 1 ]]; then
+using_external_monitor=$(swaymsg -t get_outputs | grep 'HDMI-A-1' | wc -l)
+total_used_displays=$(swaymsg -t get_outputs | grep 'active' | grep 'true' | wc -l)
+if (! [[ "$using_external_monitor" == 1 ]]) || [[ "$total_used_displays" == 2 ]]; then
   swaylock \
     --image "/home/szymon/.config/sway/hexagons.png" \
     --hide-keyboard-layout \

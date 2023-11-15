@@ -23,4 +23,4 @@ include ~/.config/sway/config.d/keybindings/gestures
 include ~/.config/sway/config.d/autostart
 
 # TODO: figure out how to have the lock thing without locking the whole system up.
-#exec /home/szymon/.config/sway/wallpaper-lock.sh
+#exec /home/szymon/.config/sway/wallpaper-lock.sh &
