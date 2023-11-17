@@ -22,7 +22,7 @@ bindsym $mod+$mod2+space floating toggle
 # Toggle the first monitor off
 bindsym $mod+$mod2+d exec swaymsg output eDP-1 disable
 bindsym $mod+$mod2+Shift+d exec swaymsg output eDP-1 enable
-bindsym $mod+$mod2+n exec swaymsg output eDP-1 pos 0 0
+bindsym $mod+$mod2+l exec swaymsg output eDP-1 pos 0 0
 
 # Swap focus between the tiling area and the floating area
 bindsym $mod+Shift+Space focus mode_toggle
