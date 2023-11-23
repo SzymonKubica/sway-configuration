@@ -9,6 +9,11 @@ bindsym --locked XF86AudioPrev exec playerctl previous
 bindsym XF86MonBrightnessUp exec brillo -q -A 5
 bindsym XF86MonBrightnessDown exec brillo -q -U 5
 
+# Add keybindings for easier brightness adjustment
+bindsym $mod+$mod2+k exec brillo -q -A 5
+bindsym $mod+$mod2+j exec brillo -q -U 5
+
+
 bindsym $mod+$mod2+period exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') +5% && pkill -RTMIN+9 i3blocks
 bindsym $mod+$mod2+comma exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') -5% && pkill -RTMIN+9 i3blocks
 bindsym $mod+$mod2+m exec --no-startup-id pactl set-sink-mute $(pacmd list-sinks |awk '/* index:/{print $3}') toggle && pkill -RTMIN+9 i3blocks
