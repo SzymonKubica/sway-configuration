@@ -19,4 +19,4 @@ set $term foot
 # Sets bemenu as the application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu bemenu-run -i -b --line-height=24 --tb='#090909' --tf='#bbbbbb' --fb='#090909' --nb='#090909' --nf='#bbbbbb' --hb='#af0000' --hf='#090909' -p '' --fn="JetBrains Mono Nerd Font 10"
+set $menu bemenu-run -i -b --line-height=24 --tb='#090909' --tf='#bbbbbb' --fb='#090909' --nb='#090909' --nf='#bbbbbb' --hb='#af0000' --hf='#090909' -p '' --fn='JetBrains Mono NF 10'

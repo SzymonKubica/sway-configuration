@@ -6,7 +6,7 @@ bar {
     position bottom
     tray_output none
 
-    font JetBrains Mono Nerd Font 10
+    font "JetBrains Mono NF 10"
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
