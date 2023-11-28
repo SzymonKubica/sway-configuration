@@ -4,7 +4,7 @@
 bindsym $mod+Return exec $term
 
 # Kill focused window
-bindsym $mod+q kill
+bindsym $mod+Shift+q kill
 
 # Start application launcher
 bindsym $mod+Space exec $menu
