@@ -17,6 +17,6 @@ bindsym $mod+$mod2+j exec brillo -q -U 5
 bindsym $mod+$mod2+period exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') +5% && pkill -RTMIN+9 i3blocks
 bindsym $mod+$mod2+comma exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') -5% && pkill -RTMIN+9 i3blocks
 bindsym $mod+$mod2+m exec --no-startup-id pactl set-sink-mute $(pacmd list-sinks |awk '/* index:/{print $3}') toggle && pkill -RTMIN+9 i3blocks
-bindsym $mod+$mod2+b exec mpc toggle
-bindsym $mod+$mod2+n exec mpc next
-bindsym $mod+$mod2+v exec mpc prev
+bindsym $mod+$mod2+b exec playerctl play-pause
+bindsym $mod+$mod2+n exec playerctl next
+bindsym $mod+$mod2+v exec playerctl previous
