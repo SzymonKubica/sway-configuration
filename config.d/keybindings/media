@@ -13,6 +13,8 @@ bindsym XF86MonBrightnessDown exec brillo -q -U 5
 bindsym $mod+$mod2+k exec brillo -q -A 5
 bindsym $mod+$mod2+j exec brillo -q -U 5
 
+# Launch pavucontrol
+bindsym $mod2+Shift+s exec pavucontrol
 
 bindsym $mod+$mod2+period exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') +5% && pkill -RTMIN+9 i3blocks
 bindsym $mod+$mod2+comma exec --no-startup-id pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') -5% && pkill -RTMIN+9 i3blocks
