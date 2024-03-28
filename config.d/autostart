@@ -10,4 +10,4 @@ exec_always /usr/bin/playerctld daemon
 exec_always /usr/bin/mpris-proxy
 
 # Notifications
-exec mako
+exec mako --layer overlay
