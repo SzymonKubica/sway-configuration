@@ -14,7 +14,7 @@ set $up k
 set $right l
 
 # Sets the terminal emulator
-set $term foot
+set $term kitty
 
 # Sets bemenu as the application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
