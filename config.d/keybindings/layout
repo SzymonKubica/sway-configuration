@@ -6,7 +6,8 @@
 bindsym $mod2+h splith
 bindsym $mod2+v splitv
 bindsym $mod2+t layout toggle split
-bindsym $mod2+n floating toggle, floating toggle
+# This allows to clear the split(h/v) and go back to a single container
+bindsym $mod2+n split none
 
 
 # Switch the current container between different layout styles
